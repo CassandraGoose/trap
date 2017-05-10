@@ -35,6 +35,22 @@
             templateUrl: '/templates/tab-home.html'
           }
         }
+      })
+      .state('tab.saved', {
+        url: '/saved',
+        views: {
+          'tab-saved': {
+            templateUrl: '/templates/tab-saved.html'
+          }
+        }
+      })
+      .state('tab.account', {
+        url: '/account',
+        views: {
+          'tab-account': {
+            templateUrl: 'templates/tab-account.html'
+          }
+        }
       });
 
     $urlRouterProvider.otherwise('/tab/home');
