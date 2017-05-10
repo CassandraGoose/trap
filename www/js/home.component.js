@@ -4,7 +4,7 @@ angular
 
 function HomeController($http, $stateParams, $state){
   const vm = this
-  vm.$ionicView = function() {
+  vm.$onInit = function() {
     console.log('heyyyyyyy bitch');
   }
 
