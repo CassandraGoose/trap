@@ -1,23 +1,24 @@
 (function() {
   'use strict';
+  console.log('hellloo??????');
+  angular
+    .module("app", ['ionic'])
+    .run(function($ionicPlatform) {
+      $ionicPlatform.ready(function() {
+        // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+        // for form inputs)
+        if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
+          cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+          cordova.plugins.Keyboard.disableScroll(true);
 
-  angular.module("app", ['ionic']).config(config)
-
-  .run(function($ionicPlatform) {
-    $ionicPlatform.ready(function() {
-      // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-      // for form inputs)
-      if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
-        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-        cordova.plugins.Keyboard.disableScroll(true);
-
-      }
-      if (window.StatusBar) {
-        // org.apache.cordova.statusbar required
-        StatusBar.styleDefault();
-      }
-    });
-  })
+        }
+        if (window.StatusBar) {
+          // org.apache.cordova.statusbar required
+          StatusBar.styleDefault();
+        }
+      });
+    })
+    .config(config)
 
   function config($stateProvider, $urlRouterProvider) {
     // Ionic uses AngularUI Router
@@ -44,14 +45,6 @@
           }
         }
       })
-      .state('tab.account', {
-        url: '/account',
-        views: {
-          'tab-account': {
-            templateUrl: 'templates/tab-account.html'
-          }
-        }
-      });
 
     $urlRouterProvider.otherwise('/tab/home');
   }

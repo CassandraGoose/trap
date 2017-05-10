@@ -1,5 +1,5 @@
 angular
-  .module("app", ['ionic'])
+  .module("app")
   .controller('HomeController', HomeController)
 
 function HomeController($http, $stateParams, $state) {

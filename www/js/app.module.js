@@ -1,17 +1,17 @@
 (function() {
 
-  angular.module("app", ['ionic'])
+  angular.module("app")
     .component('home', {
-      templateUrl: 'templates/tab-home.html',
+      templateUrl: 'js/home/home.html',
       controller: 'HomeController'
     })
     .component('saved', {
-      templateUrl: 'templates/tab-saved.html',
+      templateUrl: 'js/saved/saved.html',
       controller: 'SavedController'
     })
-    .component('account', {
-      templateUrl: 'templates/tab-account.html',
-      controller: 'AccountController'
-    })
+    // .component('account', {
+    //   templateUrl: 'templates/tab-account.html',
+    //   controller: 'AccountController'
+    // })
     //do i need a tab component? brain hurts.
 }())
