@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module("app").config(config)
+  angular.module("app", ['ionic']).config(config)
 
   .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
@@ -22,12 +22,22 @@
   function config($stateProvider, $urlRouterProvider) {
     // Ionic uses AngularUI Router
     $stateProvider
-      .state('home', {
-        name: 'home',
-        url: '/',
-        templateUrl: 'templates/home.html'
+      .state('tab', {
+        url: '/tab',
+        abstract: true,
+        templateUrl: 'templates/tabs.html'
+      })
+      .state('tab.home', {
+        //tab.home???? why?
+        url: '/home',
+        views: {
+          'tab-home': {
+            templateUrl: '/templates/tab-home.html'
+          }
+        }
       });
-    $urlRouterProvider.otherwise('/');
+
+    $urlRouterProvider.otherwise('/tab/home');
   }
 
 }());
