@@ -7,3 +7,7 @@
 ion-content {
   background-image: url("/img/gradient.jpg") !important;
 }
+
+.solid {
+  min-width: 175px !important;
+}
