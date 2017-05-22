@@ -1,1 +1,9 @@
 /* Empty. Add your own CSS if you like */
+.ack {
+  position: absolute;
+
+}
+
+ion-content {
+  background-image: url("/img/gradient.jpg") !important;
+}

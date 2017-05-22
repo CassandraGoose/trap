@@ -37,14 +37,7 @@
           }
         }
       })
-      .state('tab.saved', {
-        url: '/saved',
-        views: {
-          'tab-saved': {
-            templateUrl: '/templates/tab-saved.html'
-          }
-        }
-      })
+      
 
     $urlRouterProvider.otherwise('/tab/home');
   }

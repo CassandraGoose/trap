@@ -4,9 +4,16 @@ angular
 
 function HomeController($http, $stateParams, $state) {
   const vm = this
+  vm.playSound = playSound
+
   vm.$onInit = function() {
-    console.log('heyyyyyyy bitch');
+    console.log("home component");
   }
+
+  function playSound() {
+    console.log("contact pi here");
+  }
+
 }
 
 
